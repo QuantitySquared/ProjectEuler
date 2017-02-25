@@ -15,7 +15,7 @@ int main() {
 			if(floor(c) == c){
 				if(a+b+c == 1000){
 					product = a*b*c;
-					printf("%f\n", product);
+					printf("%.1f\n", product);
 					return 0;
 				}
 			}	
