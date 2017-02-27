@@ -26,6 +26,9 @@ int main() {
 	for(i=0; i<500; i++){
 		sum += multiplicand[i];
 	}
+
+	free(multiplicand);
+
 	printf("%d\n", sum);
 }
 
@@ -55,6 +58,8 @@ int * largeMult(int * multiplicand, int multiplier) {
 		}
 
 	}
+
+	free(temp);
 
 	return multiplicand;
 	
