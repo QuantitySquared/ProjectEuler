@@ -21,8 +21,8 @@ int main() {
 
 	for(i=0; i<999; i++) {
 		multiplicand = largeMult(multiplicand, multiplier);
-	}	
-	
+	}
+
 	for(i=0; i<500; i++){
 		sum += multiplicand[i];
 	}
@@ -38,12 +38,12 @@ int * largeMult(int * multiplicand, int multiplier) {
 	int i = 0;
 	int j = 0;
 	int number;
-	
+
 	temp = (int *) malloc(500*sizeof(int));
 	memcpy(temp, multiplicand, 500*sizeof(int));
 
 	for(i=0; i< multiplier-1; i++) {
-		
+
 		for(j = 0; j < 500; j++) {
 			number = multiplicand[j] + temp[j]+ carry;
 			if (number < 10){
@@ -54,7 +54,7 @@ int * largeMult(int * multiplicand, int multiplier) {
 				number -= 10;
 				multiplicand[j] = number;
 				carry = 1;
-			}		
+			}
 		}
 
 	}
@@ -62,6 +62,6 @@ int * largeMult(int * multiplicand, int multiplier) {
 	free(temp);
 
 	return multiplicand;
-	
+
 }
 
