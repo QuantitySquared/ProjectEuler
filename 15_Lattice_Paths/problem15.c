@@ -19,6 +19,5 @@ int main() {
 			}
 		}
 	}
-	
 	printf("%lld\n", grid[20][20]);
 }

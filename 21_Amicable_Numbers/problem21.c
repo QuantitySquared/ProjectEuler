@@ -24,6 +24,7 @@ int main() {
 	}
 
 	printf("%d\n", sum);
+	printf("%d\n", amicableNums);
 
 
 }
@@ -45,7 +46,7 @@ int findInArray( int * array, int elements, int num){
 int sumOfDivisors(int num) {
 	int sum=0;
 	int i;
-	
+
 	for(i=1; i<num; i++){
 		if (num%i == 0)
 			sum += i;
