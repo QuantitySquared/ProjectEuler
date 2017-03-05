@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 int divisorSum(int);
-int isAbundant(int *, int, int);
 
 int main(){
 	int max = 28123;
@@ -33,21 +32,7 @@ int main(){
 		if(!abundantSum[i])
 			sum+=i;
 	}
-/*
-	for(i=1; i<max; i++){
-		for(j=0; j<i; j++){
-			if(isAbundant(abundantList, abundantNumbers, j) && isAbundant(abundantList, abundantNumbers, i-j)){
-				conditionsMet=1;
-				printf("%d\n", i);
-				break;
-			}
-		}
-		if (conditionsMet==0){
-			sum+=i;
-		}
-		conditionsMet=0;
-	}
-*/	
+	
 	printf("%d\n", sum);
 
 	return 0;
@@ -63,14 +48,5 @@ int divisorSum(int input) {
 	}
 
 	return sum;
-}
-
-int isAbundant(int *abundantList, int abundantNums, int input){
-	int i;
-	for(i=0; i<abundantNums; i++){
-		if (input == abundantList[i])
-			return 1;
-	}
-	return 0;
 }
 
